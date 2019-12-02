@@ -1,0 +1,105 @@
+body {
+    background-color: #ff9933;
+    height : 100%;
+}
+
+nav ul {
+    width: 100%;  
+    padding: 0px;
+    margin: 0px;
+    background-color:#7D0093;
+    list-style: none;
+
+    
+}
+
+nav ul li {
+    display: inline;
+    font-size: 1.5em;
+
+}
+
+nav ul li a {
+   flex-wrap: nowrap;
+    padding: 15px 189px;
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+    border-bottom: 3px solid #FFFFFF;
+    border-bottom: none;
+ 
+}
+    nav ul li a:hover {
+    color: black;
+        
+    }
+
+h1  {
+    font-family: 'Fredoka One', 'Londrina Solid', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+form {
+    margin: 5px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+form input, form select {
+    width: 25%;
+    height: 25px;
+    border: none;
+    text-align: left;
+    padding: 0 2px;
+}  
+
+#date {
+    width: 8%;
+}
+
+label {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+form input[type="submit"] {
+    background-color: #7D0093;
+    border: 1px solid black;
+    color: #361a0c;
+    margin: 20px 0;
+    height: 2em;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1d90e5;
+    color: white;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+footer {
+    background-color: #7D0093;
+    text-align: center;
+    width: 100%;
+}
+
+footer a {
+    color: black;
+    font-size: 1.3em;
+}
+
+footer p {
+    font-size: 1.3em;
+}
+
+footer h2 {
+    color: white;
+}
+
+
+

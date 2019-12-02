@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav>      
+            <ul>
+                    <li><a href="RolêTop.html">HOME</a></li>
+                    <li><a href="galeria.html">FOTOS</a></li>
+                    <li><a href="cadastro.html">LOGIN</a></li>
+                    <li><a href="eventos.html">ORÇAMENTO</a></li>
+                </ul>
+             </nav>
+            </header>
+
+            <main>
+                <h2>Dashboard</h2>
+        
+                <section id="status-pedidos">
+                    <h3>Eventos Cadastrados</h3>
+                    <div id="painel">
+                        <div class="box-status-pedidos aprovados">
+                            <h4>Aprovados</h4>
+                            <p>4</p>
+                        </div>
+                        <div class="box-status-pedidos pendentes">
+                            <h4>Pendentes</h4>
+                            <p>2</p>
+                        </div>
+                        <div class="box-status-pedidos reprovados">
+                            <h4>Reprovados</h4>
+                            <p>1</p>
+                        </div>
+                    </div>
+                </section>
+        
+                <section id="lista-pedidos">
+                    <h3>Tipo de eventos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Nome do cliente</th>
+                                <th rowspan="2">Tipo do evento</th>
+                                <th colspan="2">Data e hora do evento</th>
+                                <th colspan="2" rowspan="2">Aprovar</th>
+                            </tr>
+                            <tr>
+                                <th><i class="far fa-calendar"></i></th>
+                                <th><i class="far fa-clock"></i></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <p>Pedidos atualizados em 10/09/2019 às 14:10</p>
+                                </td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>Cesar Sportore</td>
+                                <td>Festa de aniversário</td>
+                                <td>14/09/2019</td>
+                                <td>15:30</td>
+                                <td><a href="#"><i class="fas fa-check"></i></a></td>
+                                <td><a href="#"><i class="fas fa-times"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Alexandre Fukaya</td>
+                                <td>Casamento</td>
+                                <td>20/09/2019</td>
+                                <td>22:00</td>
+                                <td><a href="#"><i class="fas fa-check"></i></a></td>
+                                <td><a href="#"><i class="fas fa-times"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+        
+            </main>
+
+            <script>
+                function toggleMobileMenu() {
+                    var ul = document.querySelector("nav ul");
+                    var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                    var icon = document.querySelector(".icon > i");
+        
+                    ul.classList.toggle("mobile-mode");
+        
+                    if (icon.classList.contains("fa-bars")) {
+                        icon.classList.remove("fa-bars");
+                        icon.classList.remove("fa");
+        
+                        icon.classList.add("fas");
+                        icon.classList.add("fa-skull");
+                    } else {
+                        icon.classList.remove("fas");
+                        icon.classList.remove("fa-skull");
+        
+                        icon.classList.add("fa");
+                        icon.classList.add("fa-bars");
+                    }
+        
+                    for (var button of commonButtons) {
+                        button.classList.toggle("active");
+                    }
+        
+                }
+                
+            </script>
+        
+           
+</body>
+</html>

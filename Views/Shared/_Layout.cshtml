@@ -1,0 +1,39 @@
+﻿@model RoleTopMVC.ViewModels.BaseViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RolêTop</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <link href="~/css/role.css" rel="stylesheet" type="text/css">
+    <link href="~/css/cadastro.css" rel="stylesheet" type="text/css">
+    <link href="~/css/galeria.css" rel="stylesheet" type="text/css">
+    <link href="~/css/eventos.css" rel="stylesheet" type="text/css">
+    <link href="~/css/dashboard.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <nav>      
+        <ul>
+                    <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+                    <li><a asp-controller="Galeria" asp-action="Galeria" class="active">Galeria</a></li>
+                    <li><a asp-controller="Cadastro" asp-action="Cadastro" class="active">LOGIN</a></li>
+                    <li><a asp-controller="Eventos" asp-action="Eventos" class="active">ORÇAMENTO</a></li>
+                </ul>
+            </nav>
+            </header>
+            @RenderBody()
+            <footer>
+            <h2>Viaje na Nossa Viagem</h2>
+            <p>Localização:Alameda Barão de Limeira, 539 Santa Cecília-SP</p>
+            <P>Telefone: 4002-8922</P>
+            <a href="#">Voltar para o topo</a>
+        </footer>
+    </body>
+    </html>
+    

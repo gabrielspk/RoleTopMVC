@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFC600;
+    background-position: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Fredoka One', 'Londrina Solid', cursive;
+}
+
+nav ul {
+    width: 100%;  
+    padding: 0px;
+    margin: 0px;
+    background-color:#7D0093;
+    list-style: none;
+
+    
+}
+
+nav ul li {
+    display: inline;
+    font-size: 1.5em;
+
+}
+
+nav ul li a {
+   flex-wrap: nowrap;
+    padding: 15px 189px;
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+    border-bottom: 3px solid #FFFFFF;
+    border-bottom: none;
+
+}
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Fredoka One', 'Londrina Solid', cursive;
+        color: white;
+}
+
+
+    nav ul li a:hover {
+       color: black;
+        color: black;
+    }
+
+    form * {
+        margin: 5px 0;
+        text-align: left;
+        overflow: hidden;
+        text-align: center;
+        
+    }
+    
+    
+    form input, form select {
+        width: 24%;
+        height: 25px;
+        border: none;
+        text-align: left;
+        padding: 0 2px;
+    }  
+    
+    form label {
+        color: black;
+        font-weight: bold;
+    }
+    
+    form input[type="submit"] {
+        background-color: #7D0093;
+        border: 1px solid black;
+        color: #361a0c;
+        margin: 20px 0;
+        height: 2em;
+        border-radius: 3px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    form input[type="submit"]:hover {
+        background-color: #1d90e5;
+        color: white;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        font-weight: bolder;
+    }
+    
+    #login {
+        text-align: center;
+    }
+
+    footer {
+        background-color: #7D0093;
+        text-align: center;
+    }
+    
+    footer a {
+        color: black;
+        font-size: 1.3em;
+    }
+    
+    footer p {
+        font-size: 1.3em;
+    }
+
+    footer h2 {
+        color: white;
+    }
+
+    

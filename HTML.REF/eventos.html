@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+    
+    <header>
+        <nav>      
+            <ul>
+                    <li><a href="RolêTop.html">HOME</a></li>
+                    <li><a href="galeria.html">FOTOS</a></li>
+                    <li><a href="cadastro.html">LOGIN</a></li>
+                    <li><a href="#">ORÇAMENTO</a></li>
+                </ul>
+             </nav>
+            </header>
+            
+            <main>
+    <h1>Realize aqui o orçamento do seu evento !</h1>
+
+    <form method="GET"action="#">
+                                    
+            <div>
+                <label for="email">EMAIL</label>
+                <br/>
+                <input id="email" type="email" maxlength="40"/>
+            </div>
+            <br/>
+            <div>
+                <label for="senha">SENHA</label>
+                <br/>
+                <input id="senha" type="password" minlength="3" maxlength="20"/>
+            </div>
+                <br/>
+            <div>
+                <label for="telefone">Telefone</label>
+                <br/>
+                <input id="telefone" type="tel" minlength="8"/>
+            </div>
+                <br/>
+            <div>
+                <label for="data do evento">data do evento</label>
+                <br/>
+                <input id="date" type="date" value="2019-09-11" min="2019-09-11" max="2019-10-30">
+            </div>
+                <br/>
+            <div>
+                <label for="quantidade de convidados">Quantidade de convidados</label>
+                <br/>
+                <select id="convidados">
+                    <option value disabled selected>selecione quantidade de convidados</option>
+                    <option>50</option>
+                    <option>100</option>
+                    <option>250</option>
+                    <option>300</option>
+                    <option>500</option>
+                    <option>700</option>
+                    <option>1000</option>
+                </select>
+            </div>
+                <BR/>
+            <div>
+                <label for="tipo de evento">Tipo do Evento</label>
+                <br/>
+                <select id="evento">
+                    <option value disabled selected>Selecione o tipo de evento</option>
+                    <option>Casamento</option>
+                    <option>Festa de aniversário</option>
+                    <option>Festa Social</option>
+                    <option>Formaturas</option>
+                    <option>Chá de bebê</option>
+                    <option>balada</option>
+                    <option>15 anos</option>
+                </select>
+            </div>
+
+           <input type="submit"value="ENVIAR ORÇAMENTO"/>
+
+     
+            <br>
+            <br>
+            <br>
+        </main>
+
+            <footer>
+                <h2>Viaje na Nossa Viagem</h2>
+                <p>Localização:Alameda Barão de Limeira, 539 Santa Cecília-SP</p>
+                <P>Telefone: 4002-8922</P>
+            </footer>
+</body>
+</html>

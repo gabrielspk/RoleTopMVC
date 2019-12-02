@@ -1,0 +1,131 @@
+body {
+    background-color: #ff9933;
+}
+
+nav ul {
+    width: 100%;  
+    padding: 0px;
+    margin: 0px;
+    background-color:#7D0093;
+    list-style: none;
+
+    
+}
+
+nav ul li {
+    display: inline;
+    font-size: 1.5em;
+
+}
+
+nav ul li a {
+   flex-wrap: nowrap;
+    padding: 15px 189px;
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+    border-bottom: 3px solid #FFFFFF;
+    border-bottom: none;
+ 
+}
+    nav ul li a:hover {
+      color: black;
+     
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Fredoka One', 'Londrina Solid', cursive;
+        color: white; 
+    }
+
+#painel {
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    display: flex;
+    font-size: 90px;
+    justify-content: center;
+    
+    
+}
+
+h3 {
+    text-align: center;
+    padding: 0.5em 0;
+    font-size: 1.3em;
+    color: #361a0c;
+    text-shadow: 
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+   -1px  1px 0 #fff,
+    1px  1px 0 #fff;
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 2em;
+    font-family: 'Fredoka One', cursive;
+}
+
+.box-status-pedidos {
+    width: 30%;
+    padding-top: .5em;
+    text-align: center;
+}
+.box-status-pedidos > p {
+    font-size: 2em;
+    padding: 0.5em 0 0 0;
+}
+
+.box-status-pedidos.reprovados {
+    background-color: #a70000;
+}
+
+.box-status-pedidos.aprovados {
+    background-color: #669100;
+}
+
+.box-status-pedidos.pendentes {
+    background-color: #ecc913;
+}
+
+table {
+    text-align: center;
+    color: #fff;
+    border: 1px dashed #ff9933;
+    width: 100%;
+    padding: 5px;
+    word-break: normal;
+}
+
+table th {
+    background-color: #7D0093;
+}
+
+table a {
+    text-decoration: none;
+    color: #7D0093;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+tfoot td {
+    text-align: center;
+    color: black;
+    background-color: #7D0093;
+}
+
+thead > tr:first-child > th:last-child {
+    padding: 0 .5em;
+}
+
+
+
+
+
+
+
