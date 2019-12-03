@@ -22,7 +22,7 @@ namespace RoleTopMVC.Controllers
         }
 
             [HttpPost]
-            public IActionResult Login(IFormCollection form)
+            public IActionResult Login (IFormCollection form)
             {
                 ViewData["Action"] = "Login";
                 try
@@ -59,13 +59,19 @@ namespace RoleTopMVC.Controllers
                     }
                     else
                     {
-                        return View("Erro" , new RespostaViewModel("Senha incorreta"));
+                        return View("Erro" , new RespostaViewModel("Senha incorreta")
+                        {
+                            NomeView = "Login"
+                        });
                     }
 
                 }
                 else
                 {
-                    return View("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado."));
+                    return View("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado.")
+                        {
+                            NomeView = "Login"
+                        });
                 }
 
             }                      

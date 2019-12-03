@@ -22,8 +22,16 @@
         <ul>
                     <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
                     <li><a asp-controller="Galeria" asp-action="Galeria" class="active">Galeria</a></li>
-                    <li><a asp-controller="Cadastro" asp-action="Cadastro" class="active">LOGIN</a></li>
                     <li><a asp-controller="Eventos" asp-action="Eventos" class="active">ORÇAMENTO</a></li>
+
+                    @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                    {
+                    <li><a asp-controller="Cadastro" asp-action="Cadastro" class="active">LOGIN</a></li>
+                        
+                    }else
+                    {
+                        <li><a asp-controller="Cliente" asp-action="Logoff">Logoff</a></li>
+                    }
                 </ul>
             </nav>
             </header>
