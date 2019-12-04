@@ -10,17 +10,18 @@ namespace RoleTopMVC.Controllers
     public class ClienteController : AbstractController
     {
         private ClienteRepository clienteRepository = new ClienteRepository();
+        private EventoRepository eventoRepository = new EventoRepository();
 
         [HttpGet]
         public IActionResult Login()
         {
-            return View(new BaseViewModel(){
+            return View(new BaseViewModel()
+            {
                 NomeView = "Login",
                 UsuarioEmail = ObterUsuarioSession(),
                 UsuarioNome = ObterUsuarioNomeSession()
             });
         }
-
             [HttpPost]
             public IActionResult Login (IFormCollection form)
             {
@@ -68,7 +69,7 @@ namespace RoleTopMVC.Controllers
                 }
                 else
                 {
-                    return View("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado.")
+                    return View("Erro" , new RespostaViewModel($"Usuário {usuario} não encontrado.")
                         {
                             NomeView = "Login"
                         });
@@ -80,6 +81,19 @@ namespace RoleTopMVC.Controllers
                     System.Console.WriteLine(e.StackTrace);
                     return View("Erro");
                 }
+            }
+
+            public IActionResult Historico ()
+            {
+                var emailCLiente = ObterUsuarioSession();
+                var eventosCliente = eventoRepository.ObterTodosPorCliente(emailCLiente);
+
+                return View(new HistoricoViewModel(){
+                    Eventos = eventosCliente,
+                    NomeView = "Histórico",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
             }
 
             public IActionResult Logoff()
