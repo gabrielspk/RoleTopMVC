@@ -34,6 +34,7 @@ namespace RoleTopMVC.Repositories
                     c.Nome = ExtrairValorDoCampo("nome", item);
                     c.TiposUsuario = uint.Parse(ExtrairValorDoCampo("tipo_usuario", item));
                     c.Email = ExtrairValorDoCampo("email", item);
+                    c.Senha = ExtrairValorDoCampo("senha", item);
                     c.Telefone = ExtrairValorDoCampo("telefone", item);
                     c.Cpf_cnpj = ExtrairValorDoCampo("Cpf_cnpj", item);
                     return c;

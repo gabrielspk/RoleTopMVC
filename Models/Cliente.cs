@@ -1,3 +1,5 @@
+using System;
+
 namespace RoleTopMVC.Models
 {
     public class Cliente
@@ -8,6 +10,7 @@ namespace RoleTopMVC.Models
         public string Email {get;set;}
         public string Cpf_cnpj {get;set;}
         public uint TiposUsuario {get;set;}
+        
 
         public Cliente()
         {
@@ -21,6 +24,7 @@ namespace RoleTopMVC.Models
             this.Telefone = telefone;
             this.Email = email;
             this.Cpf_cnpj = cpf_cnpj;
+            
         }       
     }
 }

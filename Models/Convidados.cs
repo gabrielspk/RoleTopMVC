@@ -6,5 +6,9 @@ namespace RoleTopMVC.Models
         {
             
         }
+        public Convidados(string nome)
+        {
+            this.Nome = nome;
+        }
     }
 }
