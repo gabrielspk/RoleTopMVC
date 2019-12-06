@@ -2961,11 +2961,6 @@
   "RootNamespace": "RoleTopMVC",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\50738510807\\Desktop\\RoleTopMVC\\Views\\Eventos\\Eventos.cshtml",
-      "TargetPath": "Views\\Eventos\\Eventos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\50738510807\\Desktop\\RoleTopMVC\\Views\\Administrador\\Dashboard.cshtml",
       "TargetPath": "Views\\Administrador\\Dashboard.cshtml",
       "FileKind": "mvc"
@@ -3003,6 +2998,11 @@
     {
       "FilePath": "c:\\Users\\50738510807\\Desktop\\RoleTopMVC\\Views\\Cliente\\Login.cshtml",
       "TargetPath": "Views\\Cliente\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\50738510807\\Desktop\\RoleTopMVC\\Views\\Evento\\Evento.cshtml",
+      "TargetPath": "Views\\Evento\\Evento.cshtml",
       "FileKind": "mvc"
     },
     {

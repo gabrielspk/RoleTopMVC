@@ -27,15 +27,13 @@ namespace RoleTopMVC.Controllers
             ViewData["Action"] = "Cadastro";
             try
             {
-                Cliente cliente = new Cliente(
-                    form["nome"],
-                    form["senha"],
-                    form["telefone"],
-                    form["email"],
-                    form["cpf_cnpj"]
-                );
-
-                cliente.TiposUsuario = (uint) TiposUsuario.CLIENTE;
+                Cliente cliente = new Cliente();
+                cliente.Nome = form["nome"];
+                cliente.Senha = form["senha"];
+                cliente.Telefone  =  form["telefone"];
+                cliente.Email =   form["email"];
+                cliente.Cpf_cnpj =   form["cpf"];
+                cliente.TipoUsuario = (uint) TiposUsuario.CLIENTE;
 
                 clienteRepository.Inserir(cliente);
                 return View("Sucesso", new RespostaViewModel("Sucesso")

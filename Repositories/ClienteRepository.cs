@@ -25,18 +25,18 @@ namespace RoleTopMVC.Repositories
 
         public Cliente ObterPor(string email)
         {
-            var linhas = File.ReadLines(PATH);
+            var linhas = File.ReadAllLines(PATH);
             foreach (var item in linhas)
             {
                 if(ExtrairValorDoCampo("email", item).Equals(email))
                 {
                     Cliente c = new Cliente();
                     c.Nome = ExtrairValorDoCampo("nome", item);
-                    c.TiposUsuario = uint.Parse(ExtrairValorDoCampo("tipo_usuario", item));
+                    c.TipoUsuario = uint.Parse(ExtrairValorDoCampo("tipo_usuario", item));
                     c.Email = ExtrairValorDoCampo("email", item);
                     c.Senha = ExtrairValorDoCampo("senha", item);
                     c.Telefone = ExtrairValorDoCampo("telefone", item);
-                    c.Cpf_cnpj = ExtrairValorDoCampo("Cpf_cnpj", item);
+                    c.Cpf_cnpj = ExtrairValorDoCampo("cpf_cnpj", item);
                     return c;
 
                 }
@@ -45,7 +45,7 @@ namespace RoleTopMVC.Repositories
         }
         private string PrepararRegistroCSV(Cliente cliente)
         {
-            return $"tipo_usuario={cliente.TiposUsuario};nome={cliente.Nome};email={cliente.Email};senha={cliente.Senha};telefone={cliente.Telefone};cpf_cnpj={cliente.Cpf_cnpj}";
+            return $"tipo_usuario={cliente.TipoUsuario};nome={cliente.Nome};email={cliente.Email};senha={cliente.Senha};telefone={cliente.Telefone};cpf_cnpj={cliente.Cpf_cnpj}";
         }
     }
 }

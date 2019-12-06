@@ -28,10 +28,10 @@ C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC.dll
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC.pdb
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC.csproj.CopyComplete
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cadastro\Cadastro.g.cshtml.cs
-C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Eventos\Eventos.g.cshtml.cs
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Galeria\Galeria.g.cshtml.cs
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Erro.g.cshtml.cs
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Sucesso.g.cshtml.cs
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Login.g.cshtml.cs
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Administrador\Dashboard.g.cshtml.cs
 C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Historico.g.cshtml.cs
+C:\Users\50738510807\Desktop\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Evento\Evento.g.cshtml.cs

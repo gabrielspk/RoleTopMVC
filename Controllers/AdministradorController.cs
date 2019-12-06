@@ -13,7 +13,7 @@ namespace RoleTopMVC.Controllers
         {
             var ninguemLogado = string.IsNullOrEmpty(ObterUsuarioTipoSession());
 
-            if (!ninguemLogado || (uint) TiposUsuario.ADMINISTRADOR == uint.Parse(ObterUsuarioTipoSession()))
+            if (!ninguemLogado && (uint) TiposUsuario.ADMINISTRADOR == uint.Parse(ObterUsuarioTipoSession()))
             {
 
                 var eventos = eventoRepository.ObterTodos();
@@ -35,9 +35,9 @@ namespace RoleTopMVC.Controllers
                         break;
                     }
                 }
-            dashboardViewModel.NomeView = "Dashboard";
-            dashboardViewModel.UsuarioEmail = ObterUsuarioSession();
-            return View(dashboardViewModel);
+                dashboardViewModel.NomeView = "Dashboard";
+                dashboardViewModel.UsuarioEmail = ObterUsuarioSession();
+                return View(dashboardViewModel);
             }
             else
             {

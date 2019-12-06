@@ -36,50 +36,50 @@ namespace RoleTopMVC.Controllers
                     var usuario = form["email"];
                     var senha = form["senha"];
                     
-                    var c = clienteRepository.ObterPor(usuario);
+                    var cliente = clienteRepository.ObterPor(usuario);
 
-                    if(c != null)
+                    if(cliente != null)
                     {
-                        if(c.Senha.Equals(senha))
+                        if(cliente.Senha.Equals(senha))
                         {
-                            switch(c.TiposUsuario){
+                            switch(cliente.TipoUsuario){
                             case (uint) TiposUsuario.CLIENTE:
-                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, c.Nome);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, c.TiposUsuario.ToString());
-                        return RedirectToAction("Index", "Home");
-                            
-                        default:
-                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, c.Nome);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, c.TiposUsuario.ToString());
-                        return RedirectToAction("Dashboard", "Administrador");
+                            HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, cliente.TipoUsuario.ToString());
+                            return RedirectToAction("Index", "Home");
+                                
+                            default:
+                            HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                            HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, cliente.TipoUsuario.ToString());
+                            return RedirectToAction("Dashboard", "Administrador");
+                        
                         }
-
 
                     }
                     else
                     {
-                        return View("Erro" , new RespostaViewModel("Senha incorreta")
-                        {
-                            NomeView = "Login"
-                        });
+                        return View("Erro" , new RespostaViewModel("Senha incorreta"));
+                        
                     }
 
                 }
                 else
                 {
-                    return View("Erro" , new RespostaViewModel($"Usuário {usuario} não encontrado.")
-                        {
-                            NomeView = "Login"
-                        });
+                    return View("Erro" , new RespostaViewModel($"Usuário {usuario} não encontrado."));
+                        
+                    
                 }
 
             }                      
                 catch (Exception e)
                 {
                     System.Console.WriteLine(e.StackTrace);
-                    return View("Erro");
+                    return View("Erro", new RespostaViewModel()
+                    {
+                        NomeView = "Login"
+                    });
                 }
             }
 
