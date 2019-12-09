@@ -17,12 +17,12 @@ namespace RoleTopMVC.Repositories
             }
         }
 
-        public bool Inserir(Evento evento)
-        {
+        public bool Inserir(Evento evento) {
             var quantidadeEvento = File.ReadAllLines(PATH).Length;
                 evento.Id = (ulong) ++quantidadeEvento;
                 var linha = new string[] {PrepararEventoCSV(evento)};
                 File.AppendAllLines(PATH, linha);
+                
                 return true;
 
         }
@@ -42,23 +42,21 @@ namespace RoleTopMVC.Repositories
             return eventosCliente;
 
         }
-            public List<Evento> ObterTodos()
-            {
+            public List<Evento> ObterTodos() {
                 var linhas = File.ReadAllLines(PATH);
                 List<Evento> eventos = new List<Evento>();
-                foreach (var l in linhas)
-                {
-                    Evento e = new Evento();
+                foreach (var l in linhas) {
+                    Evento evento = new Evento ();
                     
-                    e.Id = ulong.Parse(ExtrairValorDoCampo("id", l));
-                    e.Status = uint.Parse(ExtrairValorDoCampo("status_eventos", l));
-                    e.Cliente.Email = ExtrairValorDoCampo("cliente_email", l);
-                    e.Cliente.Senha = ExtrairValorDoCampo("cliente_senha", l);
-                    e.TipoEvento.Nome = ExtrairValorDoCampo("TipoEvento_nome", l);
-                    e.Convidados.Nome = ExtrairValorDoCampo("Convidados_nome", l);
-                    e.DataDoEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento", l));
+                    evento.Id = ulong.Parse(ExtrairValorDoCampo("id", l));
+                    evento.Status = uint.Parse(ExtrairValorDoCampo("status_eventos", l));
+                    evento.Cliente.Email = ExtrairValorDoCampo("cliente_email", l);
+                    evento.Cliente.Senha = ExtrairValorDoCampo("cliente_senha", l);
+                    evento.TipoEvento.Nome = ExtrairValorDoCampo("TipoEvento_nome", l);
+                    evento.Convidados.Nome = ExtrairValorDoCampo("Convidados_nome", l);
+                    evento.DataDoEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento", l));
 
-                    eventos.Add(e);
+                    eventos.Add(evento);
                 }
                 return eventos;
             }
@@ -105,13 +103,13 @@ namespace RoleTopMVC.Repositories
 
             }
 
-            private string PrepararEventoCSV(Evento e)
+            private string PrepararEventoCSV(Evento evento)
             {
-                Cliente c = e.Cliente;
-                TipoEvento t = e.TipoEvento;
-                Convidados cv = e.Convidados;
+                Cliente c = evento.Cliente;
+                TipoEvento t = evento.TipoEvento;
+                Convidados cv = evento.Convidados;
 
-                return $"id={e.Id};status_pedidos={e.Status};cliente_nome={c.Nome};cliente_email={c.Email};cliente_senha={c.Senha};TipoEvento_nome={t.Nome};Convidados_nome={cv.Nome};data_evento={e.DataDoEvento}";
+                return $"id={evento.Id};status_eventos={evento.Status};cliente_nome={c.Nome};cliente_email={c.Email};cliente_senha={c.Senha};TipoEvento_nome={t.Nome};Convidados_nome={cv.Nome};data_evento={evento.DataDoEvento}";
             }
     }
 }

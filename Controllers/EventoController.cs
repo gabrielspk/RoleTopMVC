@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RoleTopMVC.Database;
 using RoleTopMVC.Models;
 using RoleTopMVC.Repositories;
 using RoleTopMVC.ViewModels;
@@ -42,7 +43,8 @@ namespace RoleTopMVC.Controllers
         {
             ViewData["Action"] = "Evento";
             Evento evento = new Evento();
-            var nomeTipoEvento = form["tipo_evento"];
+
+            var nomeTipoEvento = form["evento"];
             TipoEvento tipoEvento = new TipoEvento();
             tipoEvento.Nome = nomeTipoEvento;
             evento.TipoEvento = tipoEvento;
@@ -77,6 +79,7 @@ namespace RoleTopMVC.Controllers
         public IActionResult Aprovar (ulong id)
         {
             var evento = eventoRepository.ObterPor(id);
+            evento.Status = (uint) StatusEvento.APROVADO;
 
             if(eventoRepository.Atualizar(evento))
             {
@@ -96,6 +99,7 @@ namespace RoleTopMVC.Controllers
         public IActionResult Reprovar (ulong id)
         {
             var evento = eventoRepository.ObterPor(id);
+            evento.Status = (uint) StatusEvento.REPROVADO;
 
             if(eventoRepository.Atualizar(evento))
             {

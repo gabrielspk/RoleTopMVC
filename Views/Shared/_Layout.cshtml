@@ -13,6 +13,7 @@
     <link href="~/css/galeria.css" rel="stylesheet" type="text/css">
     <link href="~/css/eventos.css" rel="stylesheet" type="text/css">
     <link href="~/css/dashboard.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
 </head>
 
 <body>
@@ -20,17 +21,17 @@
     <header>
         <nav>      
         <ul>
-                    <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
-                    <li><a asp-controller="Galeria" asp-action="Galeria" class="active">Galeria</a></li>
-                    <li><a asp-controller="Evento" asp-action="Evento" class="active">ORÇAMENTO</a></li>
+                    <li><a asp-controller="Home" asp-action="Index" class="active">HOME</a></li>
+                    <li><a asp-controller="Galeria" asp-action="Galeria" class="active">GALERIA</a></li>
+                    <li><a asp-controller="Evento" asp-action="Evento" class="active">EVENTO</a></li>
                     @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
                     {
                     <li><a asp-controller="Cliente" asp-action="Login" class="active">LOGIN</a></li>    
                     }
                     else
                     {
-                        <li><a asp-controller="Cliente" asp-action="Logoff">Logoff</a></li>
-                        <li><a asp-controller="Cliente" asp-action="Historico">Eventos</a></li>
+                        <li><a asp-controller="Administrador" asp-action="Dashboard">DASHBOARD</a></li>
+                        <li><a asp-controller="Cliente" asp-action="Logoff">LOGOFF</a></li>
                     }
                 
                 </ul>
