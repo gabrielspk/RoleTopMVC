@@ -3,29 +3,35 @@
     <h1>Realize aqui o orçamento do seu evento  !</h1>
 
     <form method="POST"action='@Url.Action("Registrar","Evento")'>
-                                    
+
+        <div>
+                <label for="nome">Nome Completo</label>
+                <br/>
+                <input id="nome" type="text" maxlength="40" minlength="3" value="@Model.Cliente.Nome" name="nome"/>
+            </div>
+
             <div>
                 <label for="email">EMAIL</label>
                 <br/>
-                <input id="email" type="email" maxlength="40"   name="email"/>
+                <input id="email" type="email" maxlength="40" value="@Model.Cliente.Email" name="email"/>
             </div>
             <br/>
             <div>
                 <label for="senha">SENHA</label>
                 <br/>
-                <input id="senha" type="password" minlength="3" maxlength="20"  name="senha"/>
+                <input id="senha" type="password" minlength="3" maxlength="20" value="@Model.Cliente.Senha" name="senha"/>
             </div>
                 <br/>
             <div>
                 <label for="telefone">Telefone</label>
                 <br/>
-                <input id="telefone" type="tel" minlength="8"  name="telefone"/>
+                <input id="telefone" type="tel" minlength="8" value="@Model.Cliente.Telefone" name="telefone"/>
             </div>
                 <br/>
             <div>
                 <label for="data do evento">data do evento</label>
                 <br/>
-                <input id="date" type="date" value="2019-09-11" min="2019-09-11" max="2019-10-30" name="data"/>
+                <input id="date" type="date" value="2019-09-11" min="2019-09-11" max="2019-12-30" name="data"/>
             </div>
                 <br/>
             <div>
@@ -35,7 +41,7 @@
                     <option value="" disabled selected>selecione quantidade de convidados</option>
                     @foreach (var convidados in Model.Convidados)
                     {
-                        <option value=@convidados.Nome>@convidados.Nome por
+                        <option value=@convidados.Nome>@convidados.Nome 
                             
                         </option>
                     }
@@ -49,7 +55,7 @@
                     <option value="" disabled selected>Selecione o tipo de evento</option>
                     @foreach (var tipoEvento in Model.TipoEvento)
                     {
-                        <option value=@tipoEvento.Nome>@tipoEvento.Nome por </option>
+                        <option value=@tipoEvento.Nome>@tipoEvento.Nome </option>
                     }
                 </select>
             </div>

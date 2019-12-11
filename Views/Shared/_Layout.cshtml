@@ -24,6 +24,7 @@
                     <li><a asp-controller="Home" asp-action="Index" class="active">HOME</a></li>
                     <li><a asp-controller="Galeria" asp-action="Galeria" class="active">GALERIA</a></li>
                     <li><a asp-controller="Evento" asp-action="Evento" class="active">EVENTO</a></li>
+                
                     @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
                     {
                     <li><a asp-controller="Cliente" asp-action="Login" class="active">LOGIN</a></li>    

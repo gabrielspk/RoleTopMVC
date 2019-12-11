@@ -50,6 +50,7 @@ namespace RoleTopMVC.Repositories
                     
                     evento.Id = ulong.Parse(ExtrairValorDoCampo("id", l));
                     evento.Status = uint.Parse(ExtrairValorDoCampo("status_eventos", l));
+                    evento.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", l);
                     evento.Cliente.Email = ExtrairValorDoCampo("cliente_email", l);
                     evento.Cliente.Senha = ExtrairValorDoCampo("cliente_senha", l);
                     evento.TipoEvento.Nome = ExtrairValorDoCampo("TipoEvento_nome", l);

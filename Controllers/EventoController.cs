@@ -50,9 +50,12 @@ namespace RoleTopMVC.Controllers
             evento.TipoEvento = tipoEvento;
 
             var nomeConvidados = form["convidados"];
-            Convidados convidados = new Convidados (nomeConvidados);
+            Convidados convidados = new Convidados ();
+            convidados.Nome = nomeConvidados;
+            evento.Convidados = convidados;
 
             Cliente cliente = new Cliente(){
+                Nome = form["nome"],
                 Email = form["email"],
                 Senha = form["senha"],
             };
