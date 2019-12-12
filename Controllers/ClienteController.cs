@@ -47,7 +47,7 @@ namespace RoleTopMVC.Controllers
                             HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                             HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
                             HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, cliente.TipoUsuario.ToString());
-                            return RedirectToAction("Index", "Home");
+                            return RedirectToAction("Historico", "Cliente");
                                 
                             default:
                             HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
