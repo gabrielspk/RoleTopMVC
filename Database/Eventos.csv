@@ -1,16 +1,5 @@
-id=1;status_eventos=1;cliente_nome=;cliente_email=fodase@gmail.com;cliente_senha=123123;TipoEvento_nome=;Convidados_nome=;data_evento=09/12/2019 15:08:02
-id=2;status_eventos=2;cliente_nome=;cliente_email=teste@gmail.com;cliente_senha=123123;TipoEvento_nome=15 anos;Convidados_nome=;data_evento=09/12/2019 17:05:29
-id=3;status_eventos=1;cliente_nome=;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Casamento;Convidados_nome=;data_evento=09/12/2019 17:17:59
-id=4;status_eventos=1;cliente_nome=;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Chá de bebê;Convidados_nome=;data_evento=11/12/2019 14:18:49
-id=5;status_eventos=2;cliente_nome=;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Festa de Aniversário;Convidados_nome=;data_evento=11/12/2019 14:24:05
-id=6;status_eventos=2;cliente_nome=;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Festa de Aniversário;Convidados_nome=;data_evento=11/12/2019 14:34:59
-id=7;status_eventos=1;cliente_nome=;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Formaturas;Convidados_nome=;data_evento=11/12/2019 14:53:50
-id=8;status_eventos=1;cliente_nome=;cliente_email=;cliente_senha=;TipoEvento_nome=Festa de Aniversário;Convidados_nome=;data_evento=11/12/2019 15:00:35
-id=9;status_eventos=1;cliente_nome=;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Chá de bebê;Convidados_nome=;data_evento=11/12/2019 16:26:33
-id=10;status_eventos=1;cliente_nome=;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Chá de bebê;Convidados_nome=250;data_evento=11/12/2019 16:38:37
-id=11;status_eventos=1;cliente_nome=;cliente_email=gabriel@gmail.com;cliente_senha=123123;TipoEvento_nome=Chá de bebê;Convidados_nome=1000;data_evento=11/12/2019 16:40:07
-id=12;status_eventos=2;cliente_nome=;cliente_email=gabriel@gmail.com;cliente_senha=123123;TipoEvento_nome=Festa de Aniversário;Convidados_nome=250;data_evento=11/12/2019 16:40:48
-id=13;status_eventos=2;cliente_nome=Marina;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Festa de Aniversário;Convidados_nome=250;data_evento=11/12/2019 16:50:01
-id=14;status_eventos=1;cliente_nome=Marina;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Casamento;Convidados_nome=50;data_evento=11/12/2019 16:58:26
-id=15;status_eventos=1;cliente_nome=Joãozinho de Oliveira Silva;cliente_email=joao@gmail.com;cliente_senha=123123;TipoEvento_nome=Casamento;Convidados_nome=300;data_evento=12/12/2019 03:13:32
-id=16;status_eventos=1;cliente_nome=gabriel@gmail.com;cliente_email=gabriel@gmail.com;cliente_senha=123123;TipoEvento_nome=Festa Social;Convidados_nome=300;data_evento=12/12/2019 05:26:22
+id=1;status_eventos=2;cliente_nome=Marina;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Festa de Aniversário;Convidados_nome=250;data_evento=11/12/2019 16:50:01
+id=2;status_eventos=1;cliente_nome=Marina;cliente_email=Marina@email.com;cliente_senha=123123;TipoEvento_nome=Casamento;Convidados_nome=50;data_evento=11/12/2019 16:58:26
+id=3;status_eventos=1;cliente_nome=Joãozinho de Oliveira Silva;cliente_email=joao@gmail.com;cliente_senha=123123;TipoEvento_nome=Casamento;Convidados_nome=300;data_evento=12/12/2019 03:13:32
+id=4;status_eventos=1;cliente_nome=gabriel;cliente_email=gabriel@gmail.com;cliente_senha=123123;TipoEvento_nome=Festa Social;Convidados_nome=300;data_evento=12/12/2019 05:26:22
+id=5;status_eventos=1;cliente_nome=José de Almeida;cliente_email=jose@gmail.com;cliente_senha=123123;TipoEvento_nome=Festa Social;Convidados_nome=500;data_evento=13/12/2019 05:32:18

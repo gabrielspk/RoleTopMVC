@@ -13,6 +13,13 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Fredoka One', 'Londrina Solid', cursive;
     color: white;
 }
+marquee {
+    font-family: 'Fredoka One', 'Londrina Solid', cursive;
+    color: white;
+    font-size: 24px;
+    background-image: url('../Img/zecapagodin.jpg');
+    
+}
 
 nav ul {
     width: 100%;  
@@ -252,12 +259,22 @@ footer p {
     font-size: 1.3em;
 }
 
+
+
 /************************************************************************************************************************************************************************************************
                                                                                     FIM DO RODAPÉ-FOOTER
 ************************************************************************************************************************************************************************************************/
 
 #doit li a {
     color: white;
+}
+
+#show h2 {
+    font-size: 30px;
+}
+
+#show > img {
+    text-align: center;
 }
 
 

@@ -4,19 +4,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RoleTopMVC.Repositories;
 using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.Controllers
 {
     public class HomeController : AbstractController
     {
+        EventoRepository eventoRepository = new EventoRepository();
         public IActionResult Index()
         {
-            return View(new BaseViewModel(){
-                NomeView = "Home",
-                UsuarioEmail = ObterUsuarioSession(),
-                UsuarioNome = ObterUsuarioNomeSession()
-            });
+                DashboardViewModel dashboardViewModel = new DashboardViewModel();
+
+                var eventos = eventoRepository.ObterTodos();
+                dashboardViewModel.NomeView = "Home";
+                dashboardViewModel.UsuarioEmail = ObterUsuarioSession();
+                dashboardViewModel.Eventos = eventos;
+                return View(dashboardViewModel);
         }
 
         public IActionResult Privacy()
